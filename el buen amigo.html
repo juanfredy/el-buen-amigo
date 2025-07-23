@@ -1,0 +1,221 @@
+<!DOCTYPE html>  
+<html lang="es"> <!-- idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- tildes  -->
+    <title> venta de ropas  </title>  <!-- tienda el buen amigo -->
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        header {
+            background-image: url('https://runwaymagazines.com/wp-content/uploads/2025/01/Dior-Men-Fall-Winter-2025-2026-Runway-Magazine-38.jpg');
+            background-size: cover;
+            background-position: center;
+            color: purple;
+            padding: 300px 300px;
+            text-align: center; 
+        }
+        header h1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 20px 20px;
+            border-radius: 10px;
+        }
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .producto {
+            background-color: white;
+            width: 300px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .producto:hover {
+            transform: scale(1.03);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+        .boton-compra {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .boton-compra:hover {
+            background-color: #219150;
+        }
+        .contacto {
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        .contacto a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .contacto a:hover {
+            color: #2980b9;
+        }
+
+        /* Estilos para ventana emergente */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .popup-contenido {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            animation: entrada 0.5s ease;
+        }
+        .popup-contenido img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .popup-contenido h2 {
+            margin: 0 0 10px 0;
+        }
+        .cerrar {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @keyframes entrada {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>Venta de ropa-El buen amigo</h1>
+</header>
+
+<section class="contenedor">
+
+    <div class="producto">
+        <img src="https://media.gq.com.mx/photos/633327ac0ae967af99cba0ac/master/w_1600,c_limit/GettyImages-1427750327.jpg" alt=" full leather look">
+        <h2>cuero full leather look</h2>
+        <p><strong>Q1,500</strong></p>
+        <p>los cueros full leather look-como-usar-con-estilo </p>
+        <button class="boton-compra" onclick="mostrarPopup('cueros full leather look')">Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="https://media.losandes.com.ar/adjuntos/368/migration/resizer/v2/R3QJGVJNSZFHVMUXELEAK26XZE.jpeg?auth=dbe45edc0cfe2ab95868e492e7fb937df084ef1750c650241c8049e184165904&width=900&height=1200" alt="pantalon Corte boxy fit">
+        <h2>pantalon Corte boxy fit</h2>
+        <p><strong>Q400.00</strong></p>
+        <p>El corte boxy fue tendencia este 2024 y lo seguirá siendo en el 2025</p>
+        <button class="boton-compra" onclick="mostrarPopup('pantalon Corte boxy fit ')">Comprar</button>
+    </div>
+    <div class="producto">
+        <img src="https://media.losandes.com.ar/adjuntos/368/migration/resizer/v2/PBQBMS2VU5DLXD2LIFJVQH635M.jpeg?auth=b6fb7758f7fef7176f619b779d9afc2d63d23f606906fa86a23fb8fa2a8eb5f0&width=1001&height=1400" alt="camisa Camperas con cuello">
+        <h2>camisa campera con cuello</h2>
+        <p><strong>Q5000.00</strong></p>
+        <p>Estas camperas son bastante inusuales pero tienen un estilo inigualable. Al no ser de una tela muy gruesa, son perfectas para las noches frescas de verano</p>
+        <button class="boton-compra" onclick="mostrarPopup('camisa campera con cuello')">Comprar</button>
+    </div>
+	<div class="producto">
+        <img src="https://media.losandes.com.ar/adjuntos/368/migration/resizer/v2/KOA4M7HJKNAN5FE6SU5EY5QFEQ.jpeg?auth=5022aeabaf29bac032fee4177d69d4bfcb20ec7f6723cd9faf65a90ebc986af7&width=960&height=1200" alt="estampado a rayas">
+        <h2>Esatmpado a rayas</h2>
+        <p><strong>Q200.00</strong></p>
+        <p>El estampado de rayas verticales, ya sea en el clásico color azul o en verde, rosa o amarillo pastel, es un infaltable para esta temporada</p>
+        <button class="boton-compra" onclick="mostrarPopup('estampado a rayas')">Comprar</button>
+    </div>
+	div class="producto">
+        <img src="https://america-retail.com/wp-content/uploads/2024/09/adidas-3-1.jpg" alt="tenis adidas">
+        <h2>tenis adidas</h2>
+        <p><strong>Q800.00</strong></p>
+        <p>Los Tenis para Hombre que Serán Tendencia mundo de la moda masculina está en constante evolución, y cada año trae consigo nuevas tendencias que capturan la atención de los amantes de los zapatos</p>
+        <button class="boton-compra" onclick="mostrarPopup('tenis adidas')">Comprar</button>
+    </div>
+	</div>
+	div class="producto">
+        <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/912f458f-593b-4e6a-9e97-a4acc8c718f3/AIR+JORDAN+1+MID+%28GS%29.png" alt="tenis nike">
+        <h2>tenis nike</h2>
+        <p><strong>Q2,000.00</strong></p>
+        <p>Los Tenis para Hombre que Serán Tendencia mundo de la moda masculina e</p>
+        <button class="boton-compra" onclick="mostrarPopup('tenis nike')">Comprar</button>
+    </div>
+	</div>
+	div class="producto">
+        <img src="https://ae01.alicdn.com/kf/S525ac4dbc17148e09ff2797d8ce02904V/Nike-New-Arrival-Air-Jordan-1-Low-Men-s-and-Women-s-sneakers-classic-model-Sports.jpg" alt="tenis nike">
+        <h2>tenis nike</h2>
+        <p><strong>Q1,000.00</strong></p>
+        <p>compra tus tenis no te quedes con las ganas</p>
+        <button class="boton-compra" onclick="mostrarPopup('tenis nike')">Comprar</button>
+    </div>
+
+
+</section>
+
+<div class="contacto">
+    <h3>Contáctanos</h3>
+    <a href="https://wa.me/50236540951" target="_blank">📱 WhatsApp</a>
+    <a href="tiendaelbuenamigo@gmail.com">📧 Correo</a>
+    <a href="tel:+502 36540951">📞 Llamada</a>
+</div>
+
+
+<div class="popup" id="popup">
+    <div class="popup-contenido">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fpopculturechat%2Fcomments%2F1hrq9xm%2Fthe_former_king_of_wattpad_male_model_francisco%2F%3Ftl%3Des-es&psig=AOvVaw044vui2gFHSnbpBsikSo6B&ust=1753384130222000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCODO24nX044DFQAAAAAdAAAAABAE" alt="Éxito">
+        <h2>¡Compra realizada!</h2>
+        <p id="mensajeProducto"></p>
+        <button class="cerrar" onclick="cerrarPopup()">Aceptar</button>
+    </div>
+</div>
+
+<script>
+    function mostrarPopup(producto) {
+        document.getElementById("mensajeProducto").innerText = "Has comprado: " + producto + ". Te contactaremos pronto.";
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function cerrarPopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
